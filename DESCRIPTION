@@ -1,0 +1,13 @@
+Package: heutools
+Title: HEU General Tools R package 
+Version: 0.0.1
+Date: 2025-12-12
+Authors@R: 
+    person("Simon", "Chambers", , "simon.chambers@nhs.net", role = c("aut", "cre"))
+Description: A collection of the tools and utilities that the HEU regularly use within data and analytics for R.
+License: use_gpl3_license() 
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+LazyData: TRUE
+
