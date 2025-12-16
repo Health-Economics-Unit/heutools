@@ -58,3 +58,60 @@ scale_fill_heu <- function(palette="heu",discrete=TRUE,reverse=FALSE,...){
         scale_fill_gradientn(colours=pal(256),...)
     }
 }
+
+#' HEU Standard theme
+#'
+#' @oaram font the name of the font family for the plot text
+#' @param titlesize the pointsize for the main title
+#' @param subtitlesize the point size for the subtitle
+#' @param captionsize the point size for the caption
+#' @param axistitlesize point size for the axis title
+#' @param axistextsize point size for the axis text
+#'
+#'
+#' @importFrom ggplot2 theme theme_minimal
+#' @export
+theme_heu <- function(font="Calibri",titlesize=20,subtitlesize=14,captionsize=9,axistitlesize=10,axistextsize=9){
+
+    theme_minimal() %+replace%    #replace elements we want to change
+        theme(
+
+              #grid elements
+              panel.grid.major = element_blank(),    #strip major gridlines
+              panel.grid.minor = element_blank(),    #strip minor gridlines
+              axis.ticks = element_blank(),          #strip axis ticks
+
+              #since theme_minimal() already strips axis lines, 
+              #we don't need to do that again
+
+              #text elements
+              plot.title = element_text(             #title
+                                        family = font,            #set font family
+                                        size = titlesize,         #set font size
+                                        face = 'bold',            #bold typeface
+                                        hjust = 0,                #left align
+                                        vjust = 2),               #raise slightly
+
+              plot.subtitle = element_text(          #subtitle
+                                           family = font,            #font family
+                                           size = subtitlesize),     #font size
+
+              plot.caption = element_text(           #caption
+                                          family = font,            #font family
+                                          size = captionsize,                 #font size
+                                          hjust = 1),               #right align
+
+              axis.title = element_text(             #axis titles
+                                        family = font,            #font family
+                                        size = axistitlesize),               #font size
+
+              axis.text = element_text(              #axis text
+                                       family = font,            #axis famuly
+                                       size = axistextsize),                #font size
+
+              axis.text.x = element_text(            #margin for axis text
+                                         margin=margin(5, b = 10))
+}
+
+
+
