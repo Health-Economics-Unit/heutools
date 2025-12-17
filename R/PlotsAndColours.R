@@ -114,4 +114,14 @@ theme_heu <- function(font="Calibri",titlesize=20,subtitlesize=14,captionsize=9,
 }
 
 
-
+#' Helper function to convert RGB colour values to a hex triplet.
+#'
+#' @param r red colour value (0-255)
+#' @param g green colour value
+#' @param b blue colour value
+#' @export
+rgb2hex <- function (r, g, b) 
+{
+    sprintf("#%s", paste(format(as.hexmode(c(r, g, b)), width = 2), 
+        collapse = ""))
+}
