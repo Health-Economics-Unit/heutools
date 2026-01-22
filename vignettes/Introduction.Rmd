@@ -1,0 +1,39 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(heutools)
+```
+# Overview
+
+This package is intended as a helper for common HEU functions.  In particular the aim is to help build consistency for plots and colours.
+
+# Plots
+
+The main function for plots is theme_heu() this is a base theme for use with plots, based on theme_minimal() with a few tweaks.
+
+Additionally there is scale_fill_heu() and scale_colour_heu() which use the HEU colour palettes to provide fill and colours for ggplot.
+
+# Colours
+
+THe HEU uses NHS colours as it's baseline, with a few colours chosen out of the palette, but in principle any NHS colours can be used.
+
+There are two functions directly linked to colours,
+
+get_heu_colours() - this pulls the HEU colours from get_nhs_colours from the NHSRtheme package  
+
+
+get_heu_palette() - this uses the HEU colours to build a palette for use within ggplot scale functions.

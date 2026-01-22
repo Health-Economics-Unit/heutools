@@ -39,7 +39,7 @@ get_heu_palette <- function(palette="heu",reverse=FALSE,...){
 #' Fill scale constructor function for HEU/NHS themes
 #'
 #' @param palette the name of the NHS or HEU palette (defaults to 'heu')
-#' @param discrete Boolean indicating whether the scale is discreete or not
+#' @param discrete Boolean indicating whether the scale is discrete or not
 #' @param reverse Boolean indicating whether to reverse the order of the colours
 #' @param ...  Additional parameters to be passed to discrete_scale() or scale_fill_gradientn() respectively for discrete TRUE/FALSE
 #'
@@ -58,6 +58,25 @@ scale_fill_heu <- function(palette="heu",discrete=TRUE,reverse=FALSE,...){
         scale_fill_gradientn(colours=pal(256),...)
     }
 }
+
+#' Colour Scale constructor for HEU/NHS themes
+#'
+#' @param palette the name of the NHS or HEU palette (defaults to 'heu')
+#' @param discrete Boolean indicating whether the palette is discrete or not
+#' @param reverse Boolean indicating whether the colour order should be reversed
+#' @param ... Additional parameters to be passed to discrete_scale or scale_colour_gradientn() respectively for discrete TRUE/FALSE
+#'
+#' @importFrom ggplot2 discrete_scale scale_colour_gradientn
+#' @export
+scale_colour_heu <- function(palette='heu',discrete=TRUE,reverse=FALSE,...){
+    pal <- get_heu_palette(palette=palette,reverse=reverse)
+    if(discrete){
+        discrete_scale("colour",paste0("nhstheme_",palette),palette=pal,...)
+    } else {
+        scale_fill_gradientn(colours=pal(256),...)
+    }
+}
+
 
 #' HEU Standard theme
 #'
