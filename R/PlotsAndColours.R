@@ -80,7 +80,7 @@ scale_colour_heu <- function(palette='heu',discrete=TRUE,reverse=FALSE,...){
 
 #' HEU Standard theme
 #'
-#' @oaram font the name of the font family for the plot text
+#' @param font the name of the font family for the plot text
 #' @param titlesize the pointsize for the main title
 #' @param subtitlesize the point size for the subtitle
 #' @param captionsize the point size for the caption
