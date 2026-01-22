@@ -37,3 +37,6 @@ get_heu_colours() - this pulls the HEU colours from get_nhs_colours from the NHS
 
 
 get_heu_palette() - this uses the HEU colours to build a palette for use within ggplot scale functions.
+
+
+The last function is rgb2hex() which converts individual RGB colours on a 1 to 256 scale into hex values usable for ggplot - this is helpful when you don't have the palette but may be able to use colour picker in paint to approximate.
