@@ -111,6 +111,7 @@ theme_heu <- function(font="Calibri",titlesize=20,subtitlesize=14,captionsize=9,
 
               axis.text.x = element_text(            #margin for axis text
                                          margin=margin(5, b = 10))
+        )
 }
 
 
