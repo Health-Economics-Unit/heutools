@@ -90,7 +90,7 @@ scale_colour_heu <- function(palette='heu',discrete=TRUE,reverse=FALSE,...){
 #'
 #' @importFrom ggplot2 theme theme_minimal
 #' @export
-theme_heu <- function(font="Calibri",titlesize=20,subtitlesize=14,captionsize=9,axistitlesize=10,axistextsize=9){
+theme_heu <- function(font = "sans",titlesize=20,subtitlesize=14,captionsize=9,axistitlesize=10,axistextsize=9){
 
     theme_minimal() %+replace%    #replace elements we want to change
         theme(
