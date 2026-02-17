@@ -1,6 +1,6 @@
 Package: heutools
 Title: HEU General Tools R package 
-Version: 0.0.2
+Version: 0.0.3
 Date: 2025-12-12
 Authors@R: 
     person("Simon", "Chambers", , "simon.chambers@nhs.net", role = c("aut", "cre"))
